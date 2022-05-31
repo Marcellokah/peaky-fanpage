@@ -1,0 +1,1 @@
+a:5:{s:14:"felhasznalonev";s:11:"Marcellokah";s:6:"jelszo";s:9:"asdqwe123";s:7:"eletkor";s:2:"20";s:3:"nem";s:1:"M";s:6:"hobbik";a:3:{i:0;s:6:"whisky";i:1;s:9:"cigarette";i:2;s:3:"gun";}}

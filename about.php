@@ -1,0 +1,68 @@
+<?php
+session_start();
+include "methods.php";
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="It's a lame fan page or something like that.">
+    <meta name="authors" content="Almási Marcell, Pozsgai Máté">
+    <title>Peaky Blinders | Awards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div id="branding">
+            <h1>Peaky Blinders</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.php">Home</a> </li>
+                <li><a href="characters.php">Characters</a> </li>
+                <li><a href="episodes.php">Episodes</a> </li>
+                <li class="current"><a href="about.php">About</a> </li>
+                <li><a href="video_game.php">Video Game</a> </li>
+                <?php if (isset($_SESSION["user"])) { ?>
+                    <li><a href="profile.php">Profile</a> </li>
+                    <li><a href="logout.php">Logout</a> </li>
+                <?php } else { ?>
+                    <li><a href="login.php">Login</a></li>
+                    <li><a href="registration.php">Registration</a></li>
+                <?php } ?>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <section id="about-peaky">
+        <div class="container">
+            <article id="about-peaky-blinders">
+                <h1 class="page-title">About the gang</h1>
+                <p>
+                    The Peaky Blinders were an urban street gang based in Birmingham, England, that operated from the end of the 19th century to the early 1900s. The group, which grew out of the harsh economic deprivations of working class Britain, was composed largely of young men of lower to middle-classes. They derived social power from robbery, violence, racketeering, illegal bookmaking and the control of gambling. Members of this gang wore a signature outfit that included tailored jackets, lapel overcoats, button waistcoats, silk scarves, bell-bottom trousers, leather boots, and peaked flat caps.
+                </p>
+                <p>
+                    The Blinders' dominance came about from beating rivals, such as the "Sloggers", whom they fought for territory in Birmingham and its surrounding districts. They held control for nearly 20 years until 1910, when a larger gang, the Birmingham Boys led by Billy Kimber, overtook them. However, even though they had disappeared by the 1920s, the name of the "Peaky Blinders" became synonymous slang for any street gang in Birmingham.
+                </p>
+            </article>
+
+            <aside id="sidebar">
+                <div class="dark">
+                    <h3>About the television series</h3>
+                    <p>
+                        In 2013, the name was reused for a BBC television series entitled Peaky Blinders. The series, which stars Cillian Murphy, Paul Anderson, and Joe Cole, is a crime story about a fictional crime family operating in Birmingham just after World War I.
+                    </p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+<footer>
+    <p>BBC, Copyright &copy; 2013</p>
+</footer>
+
+</body>
+</html>
